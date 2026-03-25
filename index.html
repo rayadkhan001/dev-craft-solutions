@@ -29,69 +29,52 @@
         <nav class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-gray-300 border-border w-full px-2 sm:px-4 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
-            <!-- BRAND -->
-            <div class="flex items-center">
-                <h2 class="font-bold">DevCraft Solutions</h2>
-            </div>
+                <!-- BRAND -->
+                <div class="flex items-center">
+                    <h2 class="font-bold">DevCraft Solutions</h2>
+                </div>
 
-            <!-- NAVIGATION LINKS (Desktop) -->
-            <div class="hidden md:flex items-center space-x-4">
-                <button class="text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                Home
-                </button>
-                <button class="text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                Services
-                </button>
-                <button class="text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                About
-                </button>
-                <button class="text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                Portfolio
-                </button>
-                <button class="text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                Contact
-                </button>
-            </div>
+                <!-- NAVIGATION LINKS (Desktop) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="scrollToSection('home')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Home</button>
+                    <button onclick="scrollToSection('services')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Services</button>
+                    <button onclick="scrollToSection('about')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">About</button>
+                    <button onclick="scrollToSection('portfolio')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Portfolio</button>
+                    <button onclick="scrollToSection('contact')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Contact</button>
+                </div>
 
-            <!-- GET STARTED BUTTON (Desktop) -->
-            <div class="hidden md:block">
-                <button class="btn text-white bg-black rounded-xl hover:bg-primary hover:text-white">
-                Get Started
-                </button>
-            </div>
+                <!-- GET STARTED BUTTON (Desktop) -->
+                <div class="hidden md:block">
+                    <button onclick="scrollToSection('contact')" class="btn text-white bg-black hover:bg-gray-200 hover:text-black transition-all duration-300 ease-in-out rounded-xl">Get Started</button>
+                </div>
 
-            <!-- MOBILE MENU BUTTON -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="text-foreground focus:outline-none">
-                    <!-- Hamburger Icon -->
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+                <!-- MOBILE MENU BUTTON -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-foreground focus:outline-none">
+                        <!-- Hamburger Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
 
             </div>
 
             <!-- MOBILE MENU -->
-            <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
-                <button class="block w-full text-left text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                    Home
-                </button>
-                <button class="block w-full text-left text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                    Services
-                </button>
-                <button class="block w-full text-left text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                    About
-                </button>
-                <button class="block w-full text-left text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                    Portfolio
-                </button>
-                <button class="block w-full text-left text-foreground font-semibold hover:text-primary px-3 py-2 transition-colors">
-                    Contact
-                </button>
-                <button class="w-full text-white bg-black rounded-xl hover:bg-primary hover:text-white px-3 py-2">
-                    Get Started
-                </button>
+            <div id="mobile-menu" class="hidden md:hidden text-center px-4 pb-4 space-y-2">
+                
+                <button onclick="scrollToSection('home')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Home</button>
+
+                <button onclick="scrollToSection('services')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Services</button>
+
+                <button onclick="scrollToSection('about')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">About</button>
+
+                <button onclick="scrollToSection('portfolio')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Portfolio</button>
+
+                <button onclick="scrollToSection('contact')" class="text-foreground font-semibold hover:text-[#57595B] px-3 py-2 transition-colors">Contact</button>
+
+               <button onclick="scrollToSection('contact')" class="w-full text-white bg-black rounded-xl hover:bg-gray-200 hover:text-black px-3 py-2 transition-all duration-300 ease-in-out">
+                Get Started</button>
             </div>
         </nav>
     </header>
@@ -128,21 +111,21 @@
                     <!-- CARDS -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <!-- CARDS 1 -->
-                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 border-border">
+                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg border-border">
                             <img src="assets/img/home_cards/code-simple.png" alt="code" class="w-16 h-16 mb-4">
                             <h3 class="mb-2 font-semibold text-xl">Custom Development</h3>
                             <p class="text-muted-foreground text-center text-gray-400">Tailored solutions built from the ground up to meet your unique business needs.</p>
                         </div>
 
                         <!-- CARDS 2 -->
-                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 border-border">
+                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg border-border">
                             <img src="assets/img/home_cards/thunder.png" alt="code" class="w-16 h-16 mb-4">
                             <h3 class="mb-2 font-semibold text-xl">Lightning Fast</h3>
                             <p class="text-muted-foreground text-center text-gray-400">Optimized for speed and performance to keep your users engaged.</p>
                         </div>
 
                         <!-- CARDS 3 -->
-                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 border-border">
+                        <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg border-border">
                             <img src="assets/img/home_cards/users.png" alt="code" class="w-16 h-16 mb-4">
                             <h3 class="mb-2 font-semibold text-xl">User-Centered</h3>
                             <p class="text-muted-foreground text-center text-gray-400">Designed with your users in mind for maximum engagement and conversion.</p>
@@ -183,7 +166,7 @@
 
 
                     <!-- SERVICE 2 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/tablet-android.png" alt="Tablet Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">Mobile Development</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -199,7 +182,7 @@
 
                     
                     <!-- SERVICE 3 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/shopping-cart.png" alt="Cart Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">E-Commerce Solutions</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -215,7 +198,7 @@
 
                     
                     <!-- SERVICE 4 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/database-management.png" alt="Database Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">Backend Development</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -231,7 +214,7 @@
 
                     
                     <!-- SERVICE 5 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/palette.png" alt="Palette Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">UI/UX Design</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -247,7 +230,7 @@
 
                     
                     <!-- SERVICE 6 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/search.png" alt="Search Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">SEO Optimization</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -263,7 +246,7 @@
 
                     
                     <!-- SERVICE 7 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/settings.png" alt="Settings Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">Website Maintenance</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -279,7 +262,7 @@
 
                     
                     <!-- SERVICE 8 -->
-                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300">
+                    <div class="flex flex-col items-start p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                         <img src="assets/img/service_grid/shield.png" alt="Shield Icon" class="w-16 h-16 mb-4">
                         <h3 class="mb-3 font-semibold text-xl">Security Solutions</h3>
                         <p class="text-start text-gray-400 mb-4">
@@ -313,28 +296,28 @@
                         <!-- STATS CARDS -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
                             <!-- CARD 1 -->
-                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300">
+                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <img src="assets/img/about/users.png" alt="User Icon" class="w-8 h-8 mb-2">
                                 <h3 class="font-semibold text-xl mb-1">150+</h3>
                                 <p class="text-gray-400 text-center">Happy Clients</p>
                             </div>
 
                             <!-- CARD 2 -->
-                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300">
+                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <img src="assets/img/about/medal.png" alt="Medal Icon" class="w-8 h-8 mb-2">
                                 <h3 class="font-semibold text-xl mb-1">320+</h3>
                                 <p class="text-gray-400 text-center">Projects Completed</p>
                             </div>
 
                             <!-- CARD 3 -->
-                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300">
+                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <img src="assets/img/about/clock.png" alt="Clock Icon" class="w-8 h-8 mb-2">
                                 <h3 class="font-semibold text-xl mb-1">12</h3>
                                 <p class="text-gray-400 text-center">Awards Won</p>
                             </div>
 
                             <!-- CARD 4 -->
-                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300">
+                            <div class="flex flex-col items-center p-6 bg-card rounded-lg border border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <img src="assets/img/about/lightbulb-on.png" alt="Lightbulb Icon" class="w-8 h-8 mb-2">
                                 <h3 class="font-semibold text-xl mb-1">24/7</h3>
                                 <p class="text-gray-400 text-center">Support</p>
@@ -345,19 +328,19 @@
                         <!-- 3 VERTICAL ROWS -->
                         <div class="pt-16 max-w-4xl mx-auto px-0 sm:px-0 space-y-6">
                             <!-- ROW 1 -->
-                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300">
+                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <h3 class="mb-2 font-semibold">Our Mission</h3>
                                 <p class="text-gray-400">Our mission is to empower businesses through innovative web solutions, fostering growth, enhancing user experience, and delivering measurable results efficiently.</p>
                             </div>
 
                             <!-- ROW 2 -->
-                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300">
+                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <h3 class="mb-2 font-semibold">Our Approach</h3>
                                 <p class="text-gray-400">We believe in collaborative partnerships, transparent communication, and delivering solutions that exceed expectations while staying within budget and timeline.</p>
                             </div>
 
                             <!-- ROW 3 -->
-                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300">
+                            <div class="bg-card text-card-foreground flex flex-col rounded-xl border p-4 border-gray-300 transition-shadow duration-300 hover:shadow-lg">
                                 <h3 class="mb-2 font-semibold">Why Choose Us</h3>
                                 <p class="text-gray-400">Our team combines technical expertise with business acumen to create solutions that are not just beautiful, but strategically designed to achieve your business objectives.</p>
                             </div>
