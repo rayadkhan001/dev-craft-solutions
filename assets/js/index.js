@@ -1,27 +1,35 @@
-// Mobile menu toggle
-const btn = document.getElementById("mobile-menu-button");
-const menu = document.getElementById("mobile-menu");
-
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
-
-// NAV BUTTON SCROLL
+// NAV BUTTON SCROLL + AUTO CLOSE MENU
 function scrollToSection(id) {
   const section = document.getElementById(id);
+  const offset = 80; // navbar height
 
   if (section) {
-    const offset = 80; // navbar height
-    const sectionTop = section.offsetTop - offset;
-
     window.scrollTo({
-      top: sectionTop,
+      top: section.offsetTop - offset,
       behavior: "smooth",
     });
 
-    // Auto close mobile menu after click
-    if (!menu.classList.contains("hidden")) {
-      menu.classList.add("hidden");
+    // Close mobile menu with animation if open
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenu.classList.contains("opacity-100")) {
+      mobileMenu.classList.remove("opacity-100", "max-h-[1000px]");
+      mobileMenu.classList.add("opacity-0", "max-h-0");
     }
   }
 }
+
+// MOBILE MENU TOGGLE WITH FADE + SLIDE
+const menuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuButton.addEventListener("click", () => {
+  if (mobileMenu.classList.contains("opacity-0")) {
+    // Show menu
+    mobileMenu.classList.remove("opacity-0", "max-h-0");
+    mobileMenu.classList.add("opacity-100", "max-h-[1000px]");
+  } else {
+    // Hide menu
+    mobileMenu.classList.remove("opacity-100", "max-h-[1000px]");
+    mobileMenu.classList.add("opacity-0", "max-h-0");
+  }
+});
