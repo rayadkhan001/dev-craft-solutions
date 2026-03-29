@@ -1,7 +1,7 @@
 // NAV BUTTON SCROLL + AUTO CLOSE MENU
 function scrollToSection(id) {
   const section = document.getElementById(id);
-  const offset = 80; // navbar height
+  const offset = 80; 
 
   if (section) {
     window.scrollTo({
